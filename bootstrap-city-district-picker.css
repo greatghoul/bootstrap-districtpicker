@@ -1,0 +1,106 @@
+.bootstrap-citypicker:before {
+    border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    left: 6px;
+    position: absolute;
+    top: -7px;
+}
+
+.bootstrap-citypicker {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 360px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 1px 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.bootstrap-citypicker:after {
+    border-bottom: 6px solid #FFFFFF;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: "";
+    left: 7px;
+    position: absolute;
+    top: -6px;
+}
+
+.bootstrap-citypicker .nav {
+    background-color: #E9F2F6;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+}
+
+.bootstrap-citypicker .nav-pills > li {
+    width: 70px;
+}
+
+.bootstrap-citypicker .nav-pills > li > a {
+    padding: 3px 0px;
+    text-align: center;
+    margin-top: 0 1px;
+}
+
+.bootstrap-citypicker .nav-pills > li > a:hover {
+    background-color: #63BEEB; 
+}
+
+.bootstrap-citypicker .container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.bootstrap-citypicker .row-fluid [class*="span"] {
+    min-height: 20px;
+}
+
+.bootstrap-citypicker .city-group li { 
+    width: 70px; 
+    display: -moz-inline-stack; 
+    display: inline-block; 
+    zoom: 1; 
+    *display:inline;
+    overflow: hidden;
+    white-space: nowrap;
+     -o-text-overflow: ellipsis;    /* for Opera */
+     text-overflow: ellipsis;        /* for IE */
+}
+
+.bootstrap-citypicker .city-group .city.selected { 
+    background: #fee;
+}
+
+.bootstrap-citypicker .city-group .city a { 
+    display: block; 
+    padding: 2px 3px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 1px;
+}
+.bootstrap-citypicker .city-group .city a:hover { 
+    background-color: #fee;
+    rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CityPicker V1.0 RyTech</title>
+        <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="bootstrap-citypicker.css" />
+        <script type="text/javascript" src="../libs/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap-citypicker.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            $('#cityName').citypicker({url: 'data.js', 
+                callback: function(city) {
+                    $(this).nextAll('.help-inline').html('城市名称：' + city.name 
+                        + '&nbsp;&nbsp;城市代码：' + city.code);
+                },
+                dataHandler: function(data) {
+                    return $.map(data.all_cities, function(city) {
+                        return $.extend({ hot:Math.random() > 0.7 }, city); 
+                    });
+                }
+            }); 
+        });
+        </script>
+    </head>
+    <body>
+        <div class="well">
+            <h4>城市选择控件 CityPicker V1.0</h4><hr/>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label">城市</label> 
+                    <div class="controls">
+                        <input type="text" id="cityName" />
+                        <input type="hidden" id="cityCode" />
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </body>
+</html>

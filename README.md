@@ -1,4 +1,4 @@
-bootstrap-citypicker
-====================
+bootstrap-city-district-picker
+==============================
 
-bootstrap的中国城市选择控件
+适用于中国的市/区选择控件
