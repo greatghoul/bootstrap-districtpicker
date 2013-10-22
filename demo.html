@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>CityPicker V1.0 RyTech</title>
-        <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="bootstrap-citypicker.css" />
-        <script type="text/javascript" src="../libs/jquery/jquery-1.7.2.js"></script>
-        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="bootstrap-citypicker.js"></script>
-        <script type="text/javascript">
-        $(function() {
-            $('#cityName').citypicker({url: 'data.js', 
-                callback: function(city) {
-                    $(this).nextAll('.help-inline').html('城市名称：' + city.name 
-                        + '&nbsp;&nbsp;城市代码：' + city.code);
-                },
-                dataHandler: function(data) {
-                    return $.map(data.all_cities, function(city) {
-                        return $.extend({ hot:Math.random() > 0.7 }, city); 
-                    });
-                }
-            }); 
-        });
-        </script>
-    </head>
-    <body>
-        <div class="well">
-            <h4>城市选择控件 CityPicker V1.0</h4><hr/>
-            <form class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label">城市</label> 
-                    <div class="controls">
-                        <input type="text" id="cityName" />
-                        <input type="hidden" id="cityCode" />
-                        <span class="help-inline"></span>
-                    </div>
-                </div>
-            </form>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bootstrap City District Picker V1.0</title>
+
+    <link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-city-district-picker.css" />
+
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-city-district-picker.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+  </head>
+  <body>
+    <div class="well">
+      <h4>城市选择控件 CityPicker V1.0</h4><hr/>
+      <form class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label">城市</label> 
+          <div class="controls">
+            <input type="text" id="cityName" />
+            <input type="hidden" id="cityCode" />
+            <span class="help-inline"></span>
+          </div>
         </div>
-        
-    </body>
+      </form>
+    </div>
+  </body>
 </html>
